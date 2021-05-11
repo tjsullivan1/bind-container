@@ -9,7 +9,7 @@ param affix string = 'se'
 ])
 param acrSku string
 param location string = resourceGroup().location
-param specifier string = '1234'
+param specifier string = uniqueString(resourceGroup().id)
 
 @allowed([
   'd'
@@ -18,7 +18,7 @@ param specifier string = '1234'
 ])
 param env string = 'd'
 
-var acrName = 'acr-${affix}-${specifier}-${env}'
+var acrName = 'acr${affix}${specifier}${env}'
 
 resource dockerAcr 'Microsoft.ContainerRegistry/registries@2020-11-01-preview' = {
   location: resourceGroup().location
