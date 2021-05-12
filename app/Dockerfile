@@ -5,4 +5,4 @@ COPY ./bind-config/* /etc/bind/
 # RUN systemctl restart bind9
 EXPOSE 53/tcp
 EXPOSE 53/udp
-CMD ["named"]
+CMD ["named", "-g", "-c", "/etc/bind/named.conf"]]
