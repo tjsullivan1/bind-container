@@ -37,5 +37,5 @@ jobs:
 
       - run: |
           docker build app/ -t acrsemog6nncklkxhqd.azurecr.io/bind:${{ github.sha }}
-          docker push acrsemog6nncklkxhqd.azurecr.io/bind${{ github.sha }}
+          docker push acrsemog6nncklkxhqd.azurecr.io/bind:${{ github.sha }}
 
