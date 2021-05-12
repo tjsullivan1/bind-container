@@ -36,6 +36,6 @@ jobs:
           password: ${{ secrets.REGISTRY_PASSWORD }}
 
       - run: |
-          docker build app/ -t acrsemog6nncklkxhqd.azurecr.io/bind:${{ github.sha }}
+          docker build app/ -t acrsemog6nncklkxhqd.azurecr.io/bind:${{ github.sha }} -t acrsemog6nncklkxhqd.azurecr.io/bind:latest
           docker push acrsemog6nncklkxhqd.azurecr.io/bind:${{ github.sha }}
 
