@@ -1,6 +1,6 @@
 acl goodclients {
         20.55.49.23;
-        10.0.0.0/16;
+        10.0.0.0/8;
         localhost;
         localnets;
 };
@@ -12,8 +12,7 @@ options {
         allow-query { goodclients; };
 
         forwarders {
-            // 168.63.129.16;
-            8.8.8.8;
+            168.63.129.16;
         };
         forward only;
         
